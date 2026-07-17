@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 // ==========================================
-// CONFIGURATION: Drop your Google Form URL here
+// CONFIGURATION: Wired Google Form URL
 // ==========================================
-const googleFormLink = "PASTE_YOUR_GOOGLE_FORM_URL_HERE";
+const googleFormLink = "https://docs.google.com/forms/d/10zqcwSmK1-qqFJGBd9L37D1T9-RkmjgjTTBVTFFwZko/viewform";
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [showRsvpFeedback, setShowRsvpFeedback] = useState(false);
 
   // Target Date: Sunday, August 16th, 2026 at 10:00 AM (Arrival Time)
   const targetDate = new Date('August 16, 2026 10:00:00').getTime();
@@ -33,13 +32,6 @@ function App() {
     const interval = setInterval(calculateTime, 1000);
     return () => clearInterval(interval);
   }, [targetDate]);
-
-  const handleRsvpClick = (e) => {
-    if (googleFormLink === "PASTE_YOUR_GOOGLE_FORM_URL_HERE" || !googleFormLink) {
-      e.preventDefault();
-      setShowRsvpFeedback(true);
-    }
-  };
 
   // Google Calendar Link Generator
   const getCalendarLink = () => {
@@ -114,45 +106,62 @@ function App() {
           </svg>
         </div>
 
-        {/* Auspicious Opening Icon (Ganesha/Kalasam Motif) */}
+        {/* Maha Periyava Blessing Frame at the Top */}
         <div className="mb-6 flex flex-col items-center">
-          <svg className="w-16 h-16 text-maroon animate-float" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Elegant simplified Kalasam Outline */}
-            <path d="M35 70 C35 55 42 50 50 50 C58 50 65 55 65 70 C65 80 58 85 50 85 C42 85 35 80 35 70 Z" fill="#8B0000" stroke="#B8860B" strokeWidth="2" />
-            {/* Coconut */}
-            <path d="M40 52 L50 35 L60 52 Z" fill="#B8860B" stroke="#B8860B" strokeWidth="1.5" />
-            {/* Mango Leaves */}
-            <path d="M32 55 C37 45 42 45 44 51 Z" fill="#2d6a4f" />
-            <path d="M68 55 C63 45 58 45 56 51 Z" fill="#2d6a4f" />
-            <path d="M48 45 C48 30 52 30 52 45 Z" fill="#2d6a4f" />
-            {/* Pot Neck / Thread */}
-            <path d="M33 60 H67" stroke="#B8860B" strokeWidth="3" />
-            {/* Swastik / Auspicious sign on Pot */}
-            <path d="M47 65 V75 M53 65 V75 M45 68 H55 M45 72 H55" stroke="#FAF6F0" strokeWidth="1.5" strokeLinecap="round" />
-            {/* Aura Halo */}
-            <circle cx="50" cy="58" r="30" stroke="#B8860B" strokeWidth="1" strokeDasharray="3 3" opacity="0.7" />
-          </svg>
-          {/* Subtle Devotional Text */}
-          <span className="text-[10px] tracking-[0.25em] uppercase font-semibold text-gold mt-2">|| श्री गणेशाय नमः ||</span>
+          <span className="text-sm tracking-[0.25em] font-bold text-maroon mb-3 select-none">|| श्री गणेशाय नमः ||</span>
+          
+          <div className="relative w-36 h-48 rounded-xl overflow-hidden border-4 border-gold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
+            <img 
+              src="/maha-periyava.png" 
+              alt="Maha Periyava Blessing" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-gold mt-3 select-none">|| श्री महापेरियवा शरणम ||</span>
         </div>
 
         {/* Headline / Invitation Intro */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <p className="text-xs uppercase tracking-[0.3em] text-gold font-bold mb-2">We cordially invite you to</p>
           <h1 className="font-serif text-3xl md:text-5xl font-black text-maroon tracking-wide mb-3 leading-tight">
             The Rs' Gruhapravesam
           </h1>
-          <div className="h-[2px] w-28 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-3"></div>
-          
-          {/* Family Names list */}
-          <p className="font-serif italic text-lg md:text-xl text-stone-700 tracking-wide mt-2">
-            Ramasubramanian, Radhika, Rakshanaa &amp; Rishikesh
-          </p>
+          <div className="h-[2px] w-28 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-1"></div>
+        </div>
+
+        {/* Visual Name Flow Chart - The Rs Names flowing from a giant R */}
+        <div className="my-6 py-2 flex items-center justify-center gap-2">
+          {/* Big Letter R */}
+          <div className="relative flex items-center justify-center">
+            <span className="font-serif text-8xl md:text-9xl font-black text-maroon leading-none select-none">
+              R
+            </span>
+          </div>
+          {/* Names flowing from R */}
+          <div className="flex flex-col text-left font-serif text-lg md:text-2xl text-stone-700 tracking-wide font-semibold border-l-2 border-gold/40 pl-4 py-1 leading-normal md:leading-relaxed">
+            <div className="flex items-center">
+              <span className="text-gold font-sans text-sm md:text-base mr-1 opacity-70">•</span>
+              <span>amasubramanian</span>
+            </div>
+            <div className="flex items-center">
+              <span className="text-gold font-sans text-sm md:text-base mr-1 opacity-70">•</span>
+              <span>adhika</span>
+            </div>
+            <div className="flex items-center">
+              <span className="text-gold font-sans text-sm md:text-base mr-1 opacity-70">•</span>
+              <span>akshanaa</span>
+            </div>
+            <div className="flex items-center">
+              <span className="text-gold font-sans text-sm md:text-base mr-1 opacity-70">•</span>
+              <span>ishikesh</span>
+            </div>
+          </div>
         </div>
 
         {/* Main invitation message */}
         <p className="text-center text-sm md:text-base leading-relaxed text-stone-600 max-w-xl mb-8 font-sans px-4">
-          With the blessings of our ancestors and the almighty, we are embarking on a new journey in our sweet home. 
+          With the blessings of our parents, ancestors and the almighty, we are embarking on a new journey in our sweet home. 
           Please join us in celebrating our housewarming ceremony and share the joy of our new beginnings.
         </p>
 
@@ -170,7 +179,7 @@ function App() {
             </svg>
           </div>
           
-          <div className="text-xs uppercase tracking-[0.2em] font-semibold text-gold border-y border-gold/30 py-1 px-4">
+          <div className="text-xs uppercase tracking-[0.2em] font-semibold text-gold border-y border-gold/30 py-1 px-4 select-none">
             Auspicious Beginnings
           </div>
 
@@ -192,7 +201,7 @@ function App() {
           
           {/* Card 1: Date & Time */}
           <div className="bg-[#FAF6F0] border border-gold/40 hover:border-gold rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center">
-            <div className="w-12 h-12 rounded-full bg-maroon/5 flex items-center justify-center text-maroon mb-4">
+            <div className="w-12 h-12 rounded-full bg-maroon/5 flex items-center justify-center text-maroon mb-4 animate-float">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
@@ -213,7 +222,7 @@ function App() {
 
           {/* Card 2: Location */}
           <div className="bg-[#FAF6F0] border border-gold/40 hover:border-gold rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center">
-            <div className="w-12 h-12 rounded-full bg-maroon/5 flex items-center justify-center text-maroon mb-4">
+            <div className="w-12 h-12 rounded-full bg-maroon/5 flex items-center justify-center text-maroon mb-4 animate-float">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -237,17 +246,16 @@ function App() {
           </div>
 
           {/* Card 3: Feast / Lunch */}
-          <div className="bg-[#FAF6F0] border border-gold/40 hover:border-gold rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center">
-            <div className="w-12 h-12 rounded-full bg-maroon/5 flex items-center justify-center text-maroon mb-4">
-              {/* Custom Banana Leaf / Feast plate illustration */}
-              <svg className="w-6 h-6 text-maroon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 12c0-4.5 4-8 9-8s9 3.5 9 8-4 8-9 8-9-3.5-9-8z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16M8 8h8M6 12h12M8 16h8" opacity="0.3" />
-                <path d="M10 9s1 2 2 2 2-2 2-2" strokeLinecap="round" />
-              </svg>
+          <div className="bg-[#FAF6F0] border border-gold/40 hover:border-gold rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center overflow-hidden relative">
+            <div className="w-16 h-12 flex items-center justify-center mb-4">
+              <img 
+                src="/banana-leaf.jpg" 
+                alt="Banana Leaf Lunch" 
+                className="w-12 h-12 object-contain mix-blend-multiply" 
+              />
             </div>
-            <h3 className="font-serif text-lg font-bold text-maroon mb-2">Feast</h3>
-            <p className="font-sans font-bold text-stone-800 text-sm">Elai Sappadu</p>
+            <h3 className="font-serif text-lg font-bold text-maroon mb-2">Lunch</h3>
+            <p className="font-sans font-bold text-stone-800 text-sm">Traditional Elai Sappadu</p>
             <p className="text-[11px] text-stone-500 mt-1 leading-snug">
               Club House Deck<br />12:00 PM onwards
             </p>
@@ -289,9 +297,8 @@ function App() {
         {/* Action / RSVP Button */}
         <div className="flex flex-col items-center w-full mb-4">
           <a
-            href={googleFormLink === "PASTE_YOUR_GOOGLE_FORM_URL_HERE" ? "#" : googleFormLink}
-            onClick={handleRsvpClick}
-            target={googleFormLink === "PASTE_YOUR_GOOGLE_FORM_URL_HERE" ? "_self" : "_blank"}
+            href={googleFormLink}
+            target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-maroon border-2 border-gold text-cream font-bold text-lg rounded-full hover:bg-maroon-dark hover:border-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 tracking-wider uppercase inline-flex items-center gap-2 cursor-pointer animate-glow-gold"
           >
@@ -300,22 +307,6 @@ function App() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
-
-          {/* Feedback UI when URL is not configured yet */}
-          {showRsvpFeedback && (
-            <div className="mt-4 p-4 bg-yellow-50 border border-yellow-300 rounded-xl text-stone-800 text-xs max-w-md text-center transition-all animate-bounce">
-              <p className="font-bold text-maroon mb-1">🔗 Developer Note (RSVP Link Pending)</p>
-              <p className="text-stone-600">
-                To connect your Google Form, open <code className="bg-stone-200 px-1 py-0.5 rounded text-red-600 font-mono text-[11px]">src/App.jsx</code> and replace the value of <code className="bg-stone-200 px-1 py-0.5 rounded text-red-600 font-mono text-[11px]">googleFormLink</code> at the top with your URL!
-              </p>
-              <button 
-                onClick={() => setShowRsvpFeedback(false)} 
-                className="mt-2 text-gold hover:text-maroon underline font-semibold text-[10px]"
-              >
-                Dismiss Warning
-              </button>
-            </div>
-          )}
         </div>
 
       </main>
