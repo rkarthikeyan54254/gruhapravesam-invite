@@ -108,7 +108,7 @@ function App() {
 
         {/* Maha Periyava Blessing Frame at the Top */}
         <div className="mb-6 flex flex-col items-center">
-          <span className="text-sm tracking-[0.25em] font-bold text-maroon mb-3 select-none">|| श्री गणेशाय नमः ||</span>
+          <span className="text-sm tracking-[0.25em] font-bold text-maroon mb-3 select-none">|| Shri Ganeshaya Namaha ||</span>
           
           <div className="relative w-36 h-48 rounded-xl overflow-hidden border-4 border-gold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
             <img 
@@ -118,7 +118,7 @@ function App() {
             />
           </div>
           
-          <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-gold mt-3 select-none">|| श्री महापेरियवा शरणम ||</span>
+          <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-gold mt-3 select-none">|| Shri Maha Periyava Sharanam ||</span>
         </div>
 
         {/* Headline / Invitation Intro */}
@@ -160,10 +160,22 @@ function App() {
         </div>
 
         {/* Main invitation message */}
-        <p className="text-center text-sm md:text-base leading-relaxed text-stone-600 max-w-xl mb-8 font-sans px-4">
+        <p className="text-center text-sm md:text-base leading-relaxed text-stone-600 max-w-xl mb-6 font-sans px-4">
           With the blessings of our parents, ancestors and the almighty, we are embarking on a new journey in our sweet home. 
           Please join us in celebrating our housewarming ceremony and share the joy of our new beginnings.
         </p>
+
+        {/* House Representation Image Banner */}
+        <div className="w-full max-w-md mx-auto my-6 rounded-2xl overflow-hidden border-2 border-gold/40 shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
+          <img 
+            src="/home-entrance.jpg" 
+            alt="Our New Home Entrance" 
+            className="w-full h-auto object-cover"
+          />
+          <div className="bg-[#FAF6F0] border-t border-gold/20 py-2.5 text-center text-xs tracking-widest text-maroon font-serif font-bold italic select-none">
+            Home is where our story begins...
+          </div>
+        </div>
 
         {/* Twin Flickering Deepam (Lamps) layout */}
         <div className="flex justify-between items-center w-full max-w-md px-6 my-2">
@@ -236,7 +248,7 @@ function App() {
               Ramagundanahalli, Borewell Road, Whitefield, Bangalore - 560066
             </p>
             <a 
-              href="https://www.google.com/maps/search/?api=1&query=Folium+by+Sumadhura+Borewell+Road+Whitefield+Bangalore"
+              href="https://www.google.com/maps/place/Folium+by+Sumadhura/@12.966449,77.7388784,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae1200d13bc5b7:0x84c71e19f65e9ba2!8m2!3d12.9664438!4d77.7434918!16s%2Fg%2F11kc8p1pyh?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank" 
               rel="noopener noreferrer" 
               className="mt-3 text-xs text-gold hover:text-maroon font-semibold underline flex items-center gap-1 cursor-pointer transition-colors"
@@ -245,7 +257,7 @@ function App() {
             </a>
           </div>
 
-          {/* Card 3: Feast / Lunch */}
+          {/* Card 3: Lunch */}
           <div className="bg-[#FAF6F0] border border-gold/40 hover:border-gold rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex flex-col items-center text-center overflow-hidden relative">
             <div className="w-16 h-12 flex items-center justify-center mb-4">
               <img 
