@@ -48,7 +48,7 @@ function App() {
       {/* Background Decorative Mandala Pattern Overlay */}
       <div className="absolute inset-0 mandala-pattern pointer-events-none"></div>
 
-      {/* Main Decorative Frame Container (Optimized with smaller padding) */}
+      {/* Main Decorative Frame Container */}
       <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-4 md:p-8 shadow-2xl z-20 animate-fade-in-up mt-6 flex flex-col items-center">
         
         {/* Intricate Gold Borders inside card */}
@@ -58,30 +58,24 @@ function App() {
         {/* Header Transliterated Mantra */}
         <span className="text-xs tracking-[0.25em] font-bold text-maroon mb-3 select-none">|| Shri Ganeshaya Namaha ||</span>
 
-        {/* Double Portrait Image Section (Maha Periyava & New Abode Entrance Side-by-Side) */}
-        <div className="flex justify-center items-center gap-6 mb-3">
+        {/* Double Portrait Image Section (Perfectly Symmetrical & Aligned, No Labels) */}
+        <div className="flex justify-center items-center gap-6 mb-4">
           {/* Kanchi Maha Periyava Blessing */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-20 h-26 rounded-lg overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
-              <img 
-                src="/maha-periyava.png" 
-                alt="Maha Periyava Blessing" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-[9px] font-bold text-maroon mt-1.5 select-none">Maha Periyava</span>
+          <div className="relative w-24 h-32 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
+            <img 
+              src="/maha-periyava.png" 
+              alt="Maha Periyava Blessing" 
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* New Home Entrance representation */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-20 h-26 rounded-lg overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
-              <img 
-                src="/home-entrance.jpg" 
-                alt="Our New Home Entrance" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-[9px] font-bold text-maroon mt-1.5 select-none">New Abode</span>
+          <div className="relative w-24 h-32 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
+            <img 
+              src="/home-entrance.jpg" 
+              alt="Our New Home Entrance" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         
@@ -104,9 +98,9 @@ function App() {
           <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-1"></div>
         </div>
 
-        {/* Visual Name Flow Chart - Perfectly sized big R covering names height */}
+        {/* Visual Name Flow Chart - Sized R covering names height */}
         <div className="my-3 py-1 flex items-center justify-center gap-2">
-          {/* Big Letter R (Sized vertically to cover the names list) */}
+          {/* Big Letter R */}
           <div className="relative flex items-center justify-center">
             <span className="font-serif text-[5rem] md:text-[7rem] font-black text-maroon leading-none select-none">
               R
