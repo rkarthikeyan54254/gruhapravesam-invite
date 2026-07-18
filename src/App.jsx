@@ -56,12 +56,22 @@ function App() {
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
 
         {/* Header Transliterated Mantra */}
-        <span className="text-xs tracking-[0.25em] font-bold text-maroon mb-3 select-none">|| Shri Ganeshaya Namaha ||</span>
+        <span className="text-xs tracking-[0.25em] font-bold text-maroon mb-2 select-none">|| Shri Ganeshaya Namaha ||</span>
+
+        {/* Sub-photo Devotional Caption & Kuladeivam Mantra - moved up, smaller, refined */}
+        <div className="flex flex-col items-center text-center mb-4 max-w-md px-4 select-none">
+          <span className="text-[8px] tracking-[0.15em] uppercase font-semibold text-gold/90 mb-0.5">
+            || Shri Maha Periyava Sharanam ||
+          </span>
+          <span className="text-[8.5px] tracking-[0.05em] font-serif font-medium text-stone-500 leading-snug">
+            || Sri Poorna Pushkalambal Sametha Hariharaputhra Swamine Namaha ||
+          </span>
+        </div>
 
         {/* Double Portrait Image Section (Perfectly Symmetrical & Aligned, No Labels) */}
         <div className="flex justify-center items-center gap-6 mb-4">
           {/* Kanchi Maha Periyava Blessing */}
-          <div className="relative w-24 h-32 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
+          <div className="relative w-24 h-24 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
             <img 
               src="/maha-periyava.png" 
               alt="Maha Periyava Blessing" 
@@ -70,7 +80,7 @@ function App() {
           </div>
 
           {/* New Home Entrance representation */}
-          <div className="relative w-24 h-32 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
+          <div className="relative w-24 h-24 rounded-xl overflow-hidden border-2 border-gold shadow-md hover:scale-[1.02] transition-transform duration-300">
             <img 
               src="/home-entrance.jpg" 
               alt="Our New Home Entrance" 
@@ -79,21 +89,11 @@ function App() {
           </div>
         </div>
         
-        {/* Sub-photo Devotional Caption & Kuladeivam Mantra */}
-        <div className="flex flex-col items-center text-center mb-3 max-w-md px-4 select-none">
-          <span className="text-[9px] tracking-[0.18em] uppercase font-bold text-gold mb-1">
-            || Shri Maha Periyava Sharanam ||
-          </span>
-          <span className="text-[9.5px] tracking-[0.08em] font-serif font-semibold text-stone-600 leading-snug">
-            || Sri Poorna Pushkalambal Sametha Hariharaputhra Swamine Namaha ||
-          </span>
-        </div>
-
         {/* Headline / Invitation Intro */}
         <div className="text-center">
           <p className="text-[10px] uppercase tracking-[0.25em] text-gold font-bold mb-1">We cordially invite you to</p>
           <h1 className="font-serif text-2xl md:text-4xl font-black text-maroon tracking-wide mb-1 leading-tight">
-            The Rs' Gruhapravesam
+            A New Beginning
           </h1>
           <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-1"></div>
         </div>
