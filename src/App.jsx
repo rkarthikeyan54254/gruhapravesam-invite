@@ -85,8 +85,15 @@ function App() {
           </div>
         </div>
         
-        {/* Sub-photo Devotional Caption */}
-        <span className="text-[9px] tracking-[0.18em] uppercase font-bold text-gold mb-3 select-none">|| Shri Maha Periyava Sharanam ||</span>
+        {/* Sub-photo Devotional Caption & Kuladeivam Mantra */}
+        <div className="flex flex-col items-center text-center mb-3 max-w-md px-4 select-none">
+          <span className="text-[9px] tracking-[0.18em] uppercase font-bold text-gold mb-1">
+            || Shri Maha Periyava Sharanam ||
+          </span>
+          <span className="text-[9.5px] tracking-[0.08em] font-serif font-semibold text-stone-600 leading-snug">
+            || Sri Poorna Pushkalambal Sametha Hariharaputhra Swamine Namaha ||
+          </span>
+        </div>
 
         {/* Headline / Invitation Intro */}
         <div className="text-center">
@@ -97,28 +104,20 @@ function App() {
           <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-1"></div>
         </div>
 
-        {/* Visual Name Flow Chart - Compact styling */}
-        <div className="my-2 py-1 flex items-center justify-center gap-1.5">
-          <span className="font-serif text-7xl md:text-8xl font-black text-maroon leading-none select-none">
-            R
-          </span>
+        {/* Visual Name Flow Chart - Perfectly sized big R covering names height */}
+        <div className="my-3 py-1 flex items-center justify-center gap-2">
+          {/* Big Letter R (Sized vertically to cover the names list) */}
+          <div className="relative flex items-center justify-center">
+            <span className="font-serif text-[5rem] md:text-[7rem] font-black text-maroon leading-none select-none">
+              R
+            </span>
+          </div>
+          {/* Names flowing from R (No bullet points or dots) */}
           <div className="flex flex-col text-left font-serif text-sm md:text-xl text-stone-700 tracking-wide font-semibold border-l border-gold/40 pl-3 py-0.5 leading-tight md:leading-normal">
-            <div className="flex items-center">
-              <span className="text-gold font-sans text-xs mr-0.5 opacity-60">•</span>
-              <span>amasubramanian</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-gold font-sans text-xs mr-0.5 opacity-60">•</span>
-              <span>adhika</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-gold font-sans text-xs mr-0.5 opacity-60">•</span>
-              <span>akshanaa</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-gold font-sans text-xs mr-0.5 opacity-60">•</span>
-              <span>ishikesh</span>
-            </div>
+            <span>amasubramanian</span>
+            <span>adhika</span>
+            <span>akshanaa</span>
+            <span>ishikesh</span>
           </div>
         </div>
 
@@ -128,7 +127,7 @@ function App() {
           Please join us in celebrating our housewarming ceremony and share the joy of our new beginnings.
         </p>
 
-        {/* Invitation Details Section (Responsive: Row list on Mobile, Cards grid on Desktop) */}
+        {/* Invitation Details Section */}
         <div className="w-full space-y-2 md:space-y-0 md:grid md:grid-cols-3 md:gap-3 my-3">
           
           {/* Card 1: Date & Time */}
@@ -202,7 +201,7 @@ function App() {
 
         </div>
 
-        {/* Compact Countdown Timer Bar (Saves high vertical space) */}
+        {/* Compact Countdown Timer Bar */}
         <div className="w-full max-w-sm bg-maroon/5 border border-gold/30 rounded-xl py-2 px-4 mb-4 text-center">
           <span className="text-[9px] uppercase tracking-widest font-bold text-maroon block mb-1">Countdown to Celebration</span>
           <div className="flex justify-center gap-6 text-stone-800 font-serif font-black text-sm">
