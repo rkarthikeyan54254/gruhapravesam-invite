@@ -55,6 +55,20 @@ function App() {
         <div className="absolute inset-1.5 border border-gold opacity-50 rounded-2xl pointer-events-none"></div>
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
 
+        {/* Small Ganesha Icon */}
+        <svg viewBox="0 0 100 100" className="w-10 h-10 mb-1.5" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M50 6 L44 17 L56 17 Z" fill="#C9A227" />
+            <circle cx="50" cy="12" r="2.5" fill="#C9A227" />
+            <circle cx="28" cy="43" r="15" fill="#C9A227" opacity="0.18" />
+            <circle cx="72" cy="43" r="15" fill="#C9A227" opacity="0.18" />
+            <ellipse cx="50" cy="46" rx="21" ry="19" fill="#FAF6F0" stroke="#8B0000" strokeWidth="2.2" />
+            <circle cx="42" cy="43" r="2" fill="#8B0000" />
+            <circle cx="58" cy="43" r="2" fill="#8B0000" />
+            <path d="M50 56 Q46 68 54 75 Q58 79 52 83" fill="none" stroke="#8B0000" strokeWidth="2.5" strokeLinecap="round" />
+          </g>
+        </svg>
+
         {/* Header Transliterated Mantra */}
         <span className="text-xs tracking-[0.25em] font-bold text-maroon mb-2 select-none">|| Shri Ganeshaya Namaha ||</span>
 
@@ -118,7 +132,7 @@ function App() {
         {/* Main invitation message */}
         <p className="text-center text-xs md:text-sm leading-relaxed text-stone-600 max-w-md mb-3 font-sans px-2">
           With the blessings of our parents, ancestors and the almighty, we are embarking on a new journey in our sweet home. 
-          Please join us in celebrating our housewarming ceremony and share the joy of our new beginnings.
+          Please join us in celebrating our new abode with your best wishes and share the joy of our new beginnings.
         </p>
 
         {/* Invitation Details Section */}
@@ -175,17 +189,28 @@ function App() {
           {/* Card 3: Lunch */}
           <div className="bg-[#FAF6F0]/80 border border-gold/30 hover:border-gold rounded-xl p-3 transition-all duration-300 flex items-center md:flex-col text-left md:text-center justify-between md:justify-center">
             <div className="flex items-center md:flex-col gap-3 md:gap-1.5">
-              <div className="w-8 h-8 rounded-full bg-maroon/5 flex items-center justify-center text-maroon shrink-0">
-                <img 
-                  src="/banana-leaf.jpg" 
-                  alt="Banana Leaf Lunch" 
-                  className="w-5 h-5 object-contain mix-blend-multiply" 
-                />
+              <div className="w-14 h-8 rounded-full bg-maroon/5 flex items-center justify-center text-maroon shrink-0 overflow-hidden">
+                <svg viewBox="0 0 140 60" className="w-12 h-6" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#8BC34A" />
+                      <stop offset="55%" stopColor="#5B8C3E" />
+                      <stop offset="100%" stopColor="#3F6B2A" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M8 30 Q20 6 70 6 Q120 6 132 30 Q120 54 70 54 Q20 54 8 30 Z" fill="url(#leafGrad)" stroke="#2F4F1D" strokeWidth="1" />
+                  <path d="M12 30 L128 30" stroke="#C8E6A0" strokeWidth="1.2" opacity="0.6" />
+                  <ellipse cx="55" cy="30" rx="14" ry="9" fill="#FFF8E7" stroke="#E8D9B5" strokeWidth="0.5" />
+                  <circle cx="28" cy="21" r="3.5" fill="#D2691E" />
+                  <circle cx="28" cy="39" r="3.5" fill="#C0392B" />
+                  <circle cx="90" cy="19" r="3.5" fill="#E8A33D" />
+                  <circle cx="95" cy="41" r="3.5" fill="#8B5E3C" />
+                  <circle cx="112" cy="30" r="3" fill="#F1C40F" />
+                </svg>
               </div>
               <div>
                 <h3 className="font-serif text-xs md:text-sm font-bold text-maroon">Lunch</h3>
-                <p className="font-sans font-bold text-stone-800 text-[11px] md:text-xs">Traditional Elai Sappadu</p>
-                <p className="text-[9px] text-stone-500">Club House, 12:00 PM onwards</p>
+                <p className="text-[9px] text-stone-500">Club House Deck Area (2nd Floor), 12:00 PM onwards</p>
               </div>
             </div>
             <span className="text-[9px] font-bold text-green-700 uppercase tracking-wider shrink-0 ml-2 md:ml-0 md:mt-2 select-none">
