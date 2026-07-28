@@ -56,18 +56,11 @@ function App() {
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
 
         {/* Small Ganesha Icon */}
-        <svg viewBox="0 0 100 100" className="w-10 h-10 mb-1.5" xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <path d="M50 6 L44 17 L56 17 Z" fill="#C9A227" />
-            <circle cx="50" cy="12" r="2.5" fill="#C9A227" />
-            <circle cx="28" cy="43" r="15" fill="#C9A227" opacity="0.18" />
-            <circle cx="72" cy="43" r="15" fill="#C9A227" opacity="0.18" />
-            <ellipse cx="50" cy="46" rx="21" ry="19" fill="#FAF6F0" stroke="#8B0000" strokeWidth="2.2" />
-            <circle cx="42" cy="43" r="2" fill="#8B0000" />
-            <circle cx="58" cy="43" r="2" fill="#8B0000" />
-            <path d="M50 56 Q46 68 54 75 Q58 79 52 83" fill="none" stroke="#8B0000" strokeWidth="2.5" strokeLinecap="round" />
-          </g>
-        </svg>
+        <img
+          src="/ganesha.png"
+          alt="Lord Ganesha"
+          className="h-14 w-auto mb-1.5 select-none"
+        />
 
         {/* Header Transliterated Mantra */}
         <span className="text-xs tracking-[0.25em] font-bold text-maroon mb-2 select-none">|| Shri Ganeshaya Namaha ||</span>
