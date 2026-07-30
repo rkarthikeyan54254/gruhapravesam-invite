@@ -48,22 +48,17 @@ function App() {
       {/* Background Decorative Mandala Pattern Overlay */}
       <div className="absolute inset-0 mandala-pattern pointer-events-none"></div>
 
-      {/* Decorative Banana Trees flanking the card */}
-      <img
-        src="/left_banana_tree-web.png"
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute left-0 bottom-0 w-[220px] lg:w-[280px] pointer-events-none select-none z-10"
-      />
-      <img
-        src="/right_banana_tree-web.png"
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute right-0 bottom-0 w-[220px] lg:w-[280px] pointer-events-none select-none z-10"
-      />
+      {/* Card row: left tree, card, right tree - trees vertically center against the card */}
+      <div className="relative z-20 w-full flex items-center justify-center gap-0 mt-6">
+        <img
+          src="/left_banana_tree-web.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden lg:block w-[170px] shrink-0 -mr-6 pointer-events-none select-none"
+        />
 
       {/* Main Decorative Frame Container */}
-      <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-4 md:p-8 shadow-2xl z-20 animate-fade-in-up mt-6 flex flex-col items-center">
+      <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-4 md:p-8 shadow-2xl z-20 animate-fade-in-up flex flex-col items-center">
         
         {/* Intricate Gold Borders inside card */}
         <div className="absolute inset-1.5 border border-gold opacity-50 rounded-2xl pointer-events-none"></div>
@@ -254,6 +249,14 @@ function App() {
         </div>
 
       </main>
+
+        <img
+          src="/right_banana_tree-web.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden lg:block w-[170px] shrink-0 -ml-6 pointer-events-none select-none"
+        />
+      </div>
 
       {/* Footer Text */}
       <footer className="w-full text-center py-4 z-20">
