@@ -55,11 +55,11 @@ function App() {
         <div className="absolute inset-1.5 border border-gold opacity-50 rounded-2xl pointer-events-none"></div>
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
 
-        {/* Small Ganesha Icon */}
+        {/* Lakshmi-Ganesha-Saraswati Trio Banner */}
         <img
-          src="/ganesha.png"
-          alt="Lord Ganesha"
-          className="h-14 w-auto mb-1.5 select-none"
+          src="/trio-banner.jpg"
+          alt="Goddess Lakshmi, Lord Ganesha and Goddess Saraswati"
+          className="w-full max-w-md rounded-xl border-2 border-gold shadow-md mb-2 select-none"
         />
 
         {/* Header Transliterated Mantra */}
