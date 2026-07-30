@@ -9,7 +9,7 @@ function App() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   // Target Date: Sunday, August 16th, 2026 at 10:00 AM (Arrival Time)
-  const targetDate = new Date('August 16, 2026 10:00:00').getTime();
+  const targetDate = new Date('August 16, 2026 11:00:00').getTime();
 
   useEffect(() => {
     const calculateTime = () => {
@@ -36,7 +36,7 @@ function App() {
   // Google Calendar Link Generator
   const getCalendarLink = () => {
     const title = encodeURIComponent("The Rs' Gruhapravesam");
-    const dates = "20260816T043000Z/20260816T100000Z"; // Aug 16, 2026 10:00 AM to 3:30 PM IST (UTC: +5:30 -> 4:30 AM to 10:00 AM)
+    const dates = "20260816T053000Z/20260816T113000Z"; // Aug 16, 2026 11:00 AM to 5:00 PM IST (UTC: +5:30 -> 5:30 AM to 11:30 AM)
     const details = encodeURIComponent("You are cordially invited to the Gruhapravesam (housewarming ceremony) of Ramasubramanian, Radhika, Rakshanaa, and Rishikesh. Lunch starts at 12:00 PM.");
     const location = encodeURIComponent("C405/406, Folium by Sumadhura, Ramagundanahalli, Borewell Road, Whitefield, Bangalore - 560066");
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}&sf=true&output=xml`;
@@ -47,6 +47,20 @@ function App() {
       
       {/* Background Decorative Mandala Pattern Overlay */}
       <div className="absolute inset-0 mandala-pattern pointer-events-none"></div>
+
+      {/* Decorative Banana Trees flanking the card */}
+      <img
+        src="/left_banana_tree-web.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden md:block absolute left-0 bottom-0 w-[220px] lg:w-[280px] pointer-events-none select-none z-10"
+      />
+      <img
+        src="/right_banana_tree-web.png"
+        alt=""
+        aria-hidden="true"
+        className="hidden md:block absolute right-0 bottom-0 w-[220px] lg:w-[280px] pointer-events-none select-none z-10"
+      />
 
       {/* Main Decorative Frame Container */}
       <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-4 md:p-8 shadow-2xl z-20 animate-fade-in-up mt-6 flex flex-col items-center">
@@ -59,7 +73,7 @@ function App() {
         <img
           src="/trio-banner.jpg"
           alt="Goddess Lakshmi, Lord Ganesha and Goddess Saraswati"
-          className="w-full max-w-md rounded-xl border-2 border-gold shadow-md mb-2 select-none"
+          className="w-full max-w-[280px] md:max-w-xs rounded-xl border-2 border-gold shadow-md mb-2 select-none"
         />
 
         {/* Header Transliterated Mantra */}
@@ -142,7 +156,7 @@ function App() {
               <div>
                 <h3 className="font-serif text-xs md:text-sm font-bold text-maroon">When</h3>
                 <p className="font-sans font-bold text-stone-800 text-[11px] md:text-xs">Sunday, Aug 16, 2026</p>
-                <p className="text-[9px] text-stone-500">Arrival: 10:00 AM onwards</p>
+                <p className="text-[9px] text-stone-500">Arrival: 11:00 AM onwards</p>
               </div>
             </div>
             <a 
