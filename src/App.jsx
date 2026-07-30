@@ -56,14 +56,14 @@ function App() {
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
 
         {/* Row: left tree | content | right tree - trees sit inside the card border */}
-        <div className="flex items-stretch justify-center">
+        <div className="flex items-end justify-center">
 
           {/* Left Banana Tree - inside the card border */}
           <img
             src="/left_banana_tree-web.png"
             alt=""
             aria-hidden="true"
-            className="hidden sm:block w-14 md:w-24 shrink-0 object-contain self-center pointer-events-none select-none"
+            className="hidden sm:block h-44 md:h-72 w-auto shrink-0 object-contain self-end pointer-events-none select-none"
           />
 
           <div className="flex-1 min-w-0 flex flex-col items-center px-2 md:px-6 py-2 md:py-4">
@@ -259,7 +259,7 @@ function App() {
             src="/right_banana_tree-web.png"
             alt=""
             aria-hidden="true"
-            className="hidden sm:block w-14 md:w-24 shrink-0 object-contain self-center pointer-events-none select-none"
+            className="hidden sm:block h-44 md:h-72 w-auto shrink-0 object-contain self-end pointer-events-none select-none"
           />
 
         </div>
