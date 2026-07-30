@@ -49,7 +49,7 @@ function App() {
       <div className="absolute inset-0 mandala-pattern pointer-events-none"></div>
 
       {/* Main Decorative Frame Container */}
-      <main className="relative max-w-4xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-2 md:p-4 shadow-2xl z-20 animate-fade-in-up mt-6">
+      <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-2 md:p-4 shadow-2xl z-20 animate-fade-in-up mt-6">
         
         {/* Intricate Gold Borders inside card */}
         <div className="absolute inset-1.5 border border-gold opacity-50 rounded-2xl pointer-events-none"></div>
@@ -60,10 +60,10 @@ function App() {
 
           {/* Left Banana Tree - inside the card border */}
           <img
-            src="/left_banana_tree_new.png"
+            src="/left_banana_tree-web.png"
             alt=""
             aria-hidden="true"
-            className="hidden sm:block w-36 md:w-60 shrink-0 object-contain self-center pointer-events-none select-none"
+            className="hidden sm:block w-14 md:w-24 shrink-0 object-contain self-center pointer-events-none select-none"
           />
 
           <div className="flex-1 min-w-0 flex flex-col items-center px-2 md:px-6 py-2 md:py-4">
@@ -256,10 +256,10 @@ function App() {
 
           {/* Right Banana Tree - inside the card border */}
           <img
-            src="/right_banana_tree_new.png"
+            src="/right_banana_tree-web.png"
             alt=""
             aria-hidden="true"
-            className="hidden sm:block w-36 md:w-60 shrink-0 object-contain self-center pointer-events-none select-none"
+            className="hidden sm:block w-14 md:w-24 shrink-0 object-contain self-center pointer-events-none select-none"
           />
 
         </div>
