@@ -48,21 +48,25 @@ function App() {
       {/* Background Decorative Mandala Pattern Overlay */}
       <div className="absolute inset-0 mandala-pattern pointer-events-none"></div>
 
-      {/* Card row: left tree, card, right tree - trees vertically center against the card */}
-      <div className="relative z-20 w-full flex items-center justify-center gap-0 mt-6">
-        <img
-          src="/left_banana_tree-web.png"
-          alt=""
-          aria-hidden="true"
-          className="hidden lg:block w-[170px] shrink-0 -mr-6 pointer-events-none select-none"
-        />
-
       {/* Main Decorative Frame Container */}
-      <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-4 md:p-8 shadow-2xl z-20 animate-fade-in-up flex flex-col items-center">
+      <main className="relative max-w-2xl w-full bg-[#FAF6F0] border-4 border-gold rounded-3xl p-2 md:p-4 shadow-2xl z-20 animate-fade-in-up mt-6">
         
         {/* Intricate Gold Borders inside card */}
         <div className="absolute inset-1.5 border border-gold opacity-50 rounded-2xl pointer-events-none"></div>
         <div className="absolute inset-2 border-2 border-dashed border-maroon-light opacity-25 rounded-2xl pointer-events-none"></div>
+
+        {/* Row: left tree | content | right tree - trees sit inside the card border */}
+        <div className="flex items-stretch justify-center">
+
+          {/* Left Banana Tree - inside the card border */}
+          <img
+            src="/left_banana_tree_new.png"
+            alt=""
+            aria-hidden="true"
+            className="hidden sm:block w-12 md:w-20 shrink-0 object-contain self-center pointer-events-none select-none"
+          />
+
+          <div className="flex-1 min-w-0 flex flex-col items-center px-2 md:px-6 py-2 md:py-4">
 
         {/* Lakshmi-Ganesha-Saraswati Trio Banner */}
         <img
@@ -248,15 +252,19 @@ function App() {
           </a>
         </div>
 
-      </main>
+          </div>
 
-        <img
-          src="/right_banana_tree-web.png"
-          alt=""
-          aria-hidden="true"
-          className="hidden lg:block w-[170px] shrink-0 -ml-6 pointer-events-none select-none"
-        />
-      </div>
+          {/* Right Banana Tree - inside the card border */}
+          <img
+            src="/right_banana_tree_new.png"
+            alt=""
+            aria-hidden="true"
+            className="hidden sm:block w-12 md:w-20 shrink-0 object-contain self-center pointer-events-none select-none"
+          />
+
+        </div>
+
+      </main>
 
       {/* Footer Text */}
       <footer className="w-full text-center py-4 z-20">
